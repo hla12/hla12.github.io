@@ -1,0 +1,74 @@
+html{
+    zoom: 0.9;
+    height: 100%;
+    width: 100%;
+}
+@font-face{
+    font-family: tambi;
+    src: url('../font/medium.ttf');
+}
+section{
+    padding-top: 15px;
+}
+p{  
+    padding-left: 2%;
+    font-size: 15px;
+    margin: 0;
+    text-decoration: transparent;
+}
+a{
+    color:blue;
+    text-decoration: none;
+}
+h3{
+    text-align: center;
+    font-family: tambi;
+    padding-bottom: 20px;
+    color: gray;
+}
+h2, h4{
+    line-height: 0.2;
+    text-align: center;
+}
+h1{
+    font-family: tambi;
+    text-align: center;
+    padding: 0;
+}
+h1, h3{
+    line-height: 0.2;
+}
+.kotak{
+    font-family: tambi;
+    font-size: 25px;
+    line-height: 1.2;
+}   
+.anak-kotak{
+    border: 2px rgb(0, 0, 0) dotted; 
+    padding: 10px; 
+    background-color:rgb(240, 253, 255); 
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+img{
+    width: 50px;
+    height: auto;
+}
+#nav{
+    margin-left: -50px;
+    text-align: center;
+    padding-top: 0;
+}
+#nav li{
+    padding:10px;
+    display: inline-block;
+}
+.footer{
+    color: gray;
+    position: fixed;
+    left : 0;
+    bottom: 1px;
+    width: 100%;
+    text-align: center;
+}

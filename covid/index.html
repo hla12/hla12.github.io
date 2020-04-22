@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid-19 Report</title>
+  <link rel="icon" type="image/ico" href="/icon/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylsheet"/>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    alert("before you click ok, i just wanna make sure that you're at home right now :)")
+  </script>
+  <script>
+  $(document).ready(function(){
+  var d = new Date();
+  $("#date").html(d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear());
+      $.ajax({url: "https://api.kawalcorona.com/indonesia/", success: function(result){
+       $("#terjangkit").html(result[0].positif + " orang");
+       $("#sembuh").html(result[0].sembuh + " orang");
+       $("#meninggal").html(result[0].meninggal + " orang");
+      }});
+  });
+  </script>
+<section>
+  <h1>Covid-19 Report</h1>
+  <h3>"Gabut Project" for monitoring covid-19</h3>
+  <h2>Case update on Indonesia</h2> 
+  <h4>Last Update : <span id="date"></span></h4>
+  
+  <div class="kotak">
+    <div class="anak-kotak">
+      ~ Positif : <span id='terjangkit'></span>
+      <br>
+      ~ Sembuh : <span id='sembuh'></span>
+      <br>
+      ~ Meninggal : <span id='meninggal'></span>
+      <br>
+      <br>
+      "Keep Healty, Stay Inside"
+    </div>
+  </div>
+  <p>Crawling information from <a target="_blank" href="https://kawalcorona.com">API kawal corona</a></p>
+  
+</section>
+<br>
+<p style="text-align: left;">Maybe if you have an API with province or city information you can contact me for my next project:</p> 
+<section>
+  <div class="kotak2">
+    <ul id="nav">
+      <li><a href="https://bit.ly/herdinlucky" target="_blank"><img src="/icon/wa.png" alt="whatsapp"></a></li>
+      <li><a href="https://t.me/herdinlucky" target="_blank"><img src="/icon/tele.png" alt="telegram"></a></li>
+      <li><a href="https://instagram.com/_hla12_" target="_blank"><img src="/icon/ig.png" alt="instagram"></a></li>
+    </ul>
+    
+
+  </div>
+</section> 
+<div class="footer">
+  <p>2020 © Herdin Lucky Ananda - All right reserverd </p>
+</div>
+  
+</body>
+</html>
