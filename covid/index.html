@@ -11,13 +11,15 @@
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
-    alert("before you click ok, i just wanna make sure that you're at home right now :)")
+    alert("before you click ok, i just wanna make sure that you're at home right now :) , and please wait 3-5 second for the magic :v")
   </script>
   <script>
   $(document).ready(function(){
   var d = new Date();
   $("#date").html(d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear());
-      $.ajax({url: "https://api.kawalcorona.com/indonesia/", success: function(result){
+      $.ajax({
+      url:"https://api.codetabs.com/v1/proxy?quest=https://api.kawalcorona.com/indonesia/",
+      success: function(result){
        $("#terjangkit").html(result[0].positif + " orang");
        $("#sembuh").html(result[0].sembuh + " orang");
        $("#meninggal").html(result[0].meninggal + " orang");
@@ -43,10 +45,11 @@
     </div>
   </div>
   <p>Crawling information from <a target="_blank" href="https://kawalcorona.com">API kawal corona</a></p>
+  <p>Also Im Using a Proxy from <a target="_blank" href=https://codetabs.com/cors-proxy/cors-proxy.html>Codetabs CORS Proxy</a></p>
   
 </section>
-<br>
-<p style="text-align: left;">Maybe if you have an API with province or city information you can contact me for my next project:</p> 
+<br><br><br><br><br><br>  
+<p style="text-align: center;">You can contact me ↓↓↓</p> 
 <section>
   <div class="kotak2">
     <ul id="nav">
